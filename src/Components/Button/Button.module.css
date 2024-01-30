@@ -1,0 +1,22 @@
+.button {
+  width: 292px;
+  height: 60px;
+  color: #232323;
+  border: 1px solid #232323;
+  background-color: white;
+  font-size: 18px;
+}
+
+.button:hover {
+  color: #E9DDCA;
+  border: 1px solid #191919;
+  background-color: #191919;
+  transition: all linear 0.3s;
+}
+
+.button:active {
+  color: #474747;
+  border: 1px solid #C3C2BF;
+  background-color: #C3C2BF;
+  transition: all linear 0.3s;
+}
