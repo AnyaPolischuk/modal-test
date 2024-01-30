@@ -1,0 +1,69 @@
+.backgroundClose {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 60%);
+}
+
+.content {
+  width: 1270px;
+  height: 580px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.buttonWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contentWrapper {
+  margin: 65px 0 0 60px;
+}
+
+.title {
+  font-size: 32px;
+  color: #232323;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.closeBnt {
+  width: 50px;
+  height: 50px;
+}
+
+.closeBnt:hover {
+  transition: all linear 0.3s;
+  filter: brightness(0) saturate(100%) invert(86%) sepia(2%) saturate(4036%) hue-rotate(326deg) brightness(114%) contrast(83%);
+}
+
+.info {
+  margin: 20px 0 5px 0; 
+}
+
+.link {
+  color: rgba(233, 221, 202, 1);
+}
+
+.successText {
+  font-size: 18px;
+}
+
+
