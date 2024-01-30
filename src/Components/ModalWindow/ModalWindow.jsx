@@ -52,7 +52,7 @@ export const ModalWindow = () => {
         <div className={style.backgroundClose} onClick={handleClose}>
           <div className={style.content} onClick={(e) => e.stopPropagation()}>
             <div>
-              <img src={isSuccess ? successImg : consultationImg} alt='consultation-img'></img>
+              <img className={style.img} src={isSuccess ? successImg : consultationImg} alt='consultation-img'></img>
             </div>
             <div className={style.contentWrapper}>
               <h2 className={style.title}>
