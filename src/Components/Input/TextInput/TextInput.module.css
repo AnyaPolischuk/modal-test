@@ -1,5 +1,5 @@
 .input {
-  width: 453px;
+  width: calc(360px + (453 - 360) * ((100vw - 480px) / (1920 - 480)));
   height: 60px;
   border: 1px solid #C3C2BF;
   font-size: 20px;
@@ -7,9 +7,16 @@
 }
 
 .inputNotCorrect {
-  width: 453px;
+  width: calc(360px + (453 - 360) * ((100vw - 480px) / (1920 - 480)));
   height: 60px;
   border: 1px solid red;
   font-size: 20px;
   padding-left: 20px;
+}
+
+@media (max-width: 1270px) {
+  .input {
+    box-sizing: border-box;
+    width: 360px;
+  }
 }

@@ -20,3 +20,9 @@
   background-color: #C3C2BF;
   transition: all linear 0.3s;
 }
+
+@media (max-width: 1270px) {
+  .button {
+    width: 360px;
+  }
+}
