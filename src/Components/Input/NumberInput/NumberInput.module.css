@@ -1,0 +1,15 @@
+.input {
+  width: 453px;
+  height: 60px;
+  border: 1px solid #C3C2BF;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.inputNotCorrect {
+  width: 453px;
+  height: 60px;
+  border: 1px solid red;
+  font-size: 20px;
+  padding-left: 20px;
+}
