@@ -1,10 +1,8 @@
-import MainPage from './pages/MainPage/MainPage';
-
-import style from './App.css';
+import { MainPage } from './pages/MainPage/MainPage';
 
 function App() {
   return (
-    <div className={style}>
+    <div>
       <MainPage />
     </div>
   );

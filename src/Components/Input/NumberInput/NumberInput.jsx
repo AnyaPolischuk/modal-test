@@ -5,36 +5,35 @@ import style from './NumberInput.module.css';
 export const NumberInput = ({ numberIsValid, setNumberIsValid }) => {
   const [phone, setPhone] = useState('');
 
-    const handleChange = (e) => {
-      const formattedPhone = formatPhone(e.target.value);
-      setPhone(formattedPhone);
-    };
+  const handleChange = (e) => {
+    const formattedPhone = formatPhoneNumber(e.target.value);
+    setPhone(formattedPhone);
+  };
   
-    const formatPhone = (value) => {
-      const phoneNumber = value.replace(/[^\d]/g, '');
-      const phoneNumberLength = phoneNumber.length;
+  const formatPhoneNumber = (value) => {
+    const phoneNumber = value.replace(/[^\d]/g, '');
+    const phoneNumberLength = phoneNumber.length;
 
-      setNumberIsValid(false);
+    setNumberIsValid(false);
 
-      if (phoneNumberLength < 3) {
-        return `+7 ${phoneNumber}`
-      }
+    if (phoneNumberLength < 3) {
+      return `+7 ${phoneNumber}`
+    }
   
-      if (phoneNumberLength < 7) {
-        console.log('меньше 7 символов')
-        return `+7 ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4)}`;
-      } 
+    if (phoneNumberLength < 7) {
+      return `+7 ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4)}`;
+    } 
   
-      if (phoneNumberLength < 9) {
-        return `+7 ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4, 7)} ${phoneNumber.slice(7)}`;
-      } 
+    if (phoneNumberLength < 9) {
+      return `+7 ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4, 7)} ${phoneNumber.slice(7)}`;
+    } 
 
-      if (phoneNumberLength === 11) {
-        setNumberIsValid(true);
-      }
+    if (phoneNumberLength === 11) {
+      setNumberIsValid(true);
+    }
       
-      return `+7 ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4, 7)} ${phoneNumber.slice(7, 9)} ${phoneNumber.slice(9, 11)}`;
-    };
+    return `+7 ${phoneNumber.slice(1, 4)} ${phoneNumber.slice(4, 7)} ${phoneNumber.slice(7, 9)} ${phoneNumber.slice(9, 11)}`;
+  };
 
   return (
     <>

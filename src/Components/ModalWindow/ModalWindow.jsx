@@ -10,20 +10,15 @@ import closeBth from '../../assets/images/close-icon.png';
 
 import style from './ModalWindow.module.css';
 
-
 export const ModalWindow = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [numberIsValid, setNumberIsValid] = useState(true);
   const [textIsValid, setTextIsValid] = useState(true);
   const [isSuccess, setIsSuccess] =  useState(false);
 
-  const handleClose = () => {
-    setIsOpen(false);
-  };
-
   const handleKeyDown = (e) => {
     if (e.key === 'Escape') {
-      handleClose();
+      setIsOpen(false);
     }
   };
 
@@ -49,7 +44,7 @@ export const ModalWindow = () => {
         <Button onClick={() => setIsOpen(true)} text='Получить консультацию' />
       </div>
       {isOpen &&  (
-        <div className={style.backgroundClose} onClick={handleClose}>
+        <div className={style.backgroundClose} onClick={() => setIsOpen(false)}>
           <div className={style.content} onClick={(e) => e.stopPropagation()}>
             <div>
               <img className={style.img} src={isSuccess ? successImg : consultationImg} alt='consultation-img'></img>
@@ -75,14 +70,14 @@ export const ModalWindow = () => {
                   <p className={style.info}>
                     Нажимая на кнопку вы соглашаетесь на 
                   </p>
-                  <a className={style.link} href=''>обработку персональных данных</a>
+                  <a className={style.link} href='/'>обработку персональных данных</a>
                 </>
               )}
               {isSuccess && (
                 <Button text='Вернуться на сайт' onClick={() => window.location.reload()} />
               )}
             </div>
-            <img src={closeBth} alt='closeIcon' className={style.closeBnt} onClick={handleClose} />
+            <img src={closeBth} alt='closeIcon' className={style.closeBnt} onClick={() => setIsOpen(false)} />
           </div>
         </div>
       )}
