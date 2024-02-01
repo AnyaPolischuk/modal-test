@@ -1,6 +1,6 @@
 # Test task from ЮТФ.
 
-Deploy [Modal Test](https://65b980a04937025054545ce5--regal-malasada-f8c9ed.netlify.app/).
+Deploy [Modal Test](https://65bb82b50295e57269ef7787--exquisite-puffpuff-ad0784.netlify.app/).
 
 ## Available Scripts
 
