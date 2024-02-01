@@ -1,5 +1,5 @@
 export const formatPhoneNumber = (phone) => {
-  let phoneNumber = phone.replace(/[^\d]/g, '');
+  const phoneNumber = phone.replace(/[^\d]/g, '');
   const phoneLength = phoneNumber.length;
 
   if (phoneLength < 1) {
