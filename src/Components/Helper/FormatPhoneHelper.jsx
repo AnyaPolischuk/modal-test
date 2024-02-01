@@ -1,9 +1,8 @@
 export const formatPhoneNumber = (phone) => {
-  const phoneNumber = phone.replace(/[^\d]/g, '');
+  let phoneNumber = phone.replace(/[^\d]/g, '');
   const phoneLength = phoneNumber.length;
-  console.log('phoneNumber', phoneNumber);
 
-  if (phoneLength < 3) {
+  if (phoneLength < 1) {
     return `+7 ${phoneNumber}`;
   }
   
