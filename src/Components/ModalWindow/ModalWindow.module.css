@@ -11,7 +11,8 @@
   background-color: rgba(0, 0, 0, 60%);
 }
 
-.content {
+.content,
+.contentSuccess {
   width: 80%;
   height: 580px;
   display: flex;
@@ -26,7 +27,8 @@
   transform: translate(-50%, -50%);
 }
 
-.contentWrapper {
+.contentWrapper,
+.contentWrapperSuccess {
   margin: 65px 0 0 60px;
 }
 
@@ -37,6 +39,13 @@
   margin: 0 0 40px 0;
 }
 
+.titleSuccess {
+  font-size: 32px;
+  color: #232323;
+  font-weight: 400;
+  margin: 100px 0 40px 0;
+}
+
 .inputWrapper {
   display: flex;
   flex-direction: column;
@@ -44,12 +53,19 @@
   margin-bottom: 20px;
 }
 
-.closeBnt {
+.closeBntImg {
   width: 50px;
   height: 50px;
 }
 
-.closeBnt:hover {
+.closeBtn,
+.closeBthSuccess {
+  background-color: transparent;
+  border: none;
+  display: flex;
+}
+
+.closeBntImg:hover {
   transition: all linear 0.3s;
   filter: brightness(0) saturate(100%) invert(86%) sepia(2%) saturate(4036%) hue-rotate(326deg) brightness(114%) contrast(83%);
 }
@@ -64,12 +80,21 @@
 
 .successText {
   font-size: 18px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: 1500px) {
-  .img {
+  .img,
+  .imgSuccess {
     width: 450px;
     height: 460px;
+  }
+  .contentSuccess {
+    box-sizing: border-box;
+    height: 460px;
+  }
+  .contentWrapperSuccess {
+    margin-top: 45px;
   }
   .content {
     height: 460px;
@@ -80,14 +105,15 @@
 }
 
 @media (max-width: 1270px) {
-  .img {
-    display: none;
-  }
   .title {
     font-size: 20px;
   }
-  .contentWrapper {
-    margin: 10px 0 0 0;
+  .info,
+  .link {
+    width: 360px;
+  }
+  .contentWrapperSuccess {
+    margin-top: 100px;
   }
   .contentWrapper {
     display: flex;
@@ -95,6 +121,54 @@
     align-items: center;
     justify-content: center;
     width: 360px;
+    margin-left: 20px;
+  }
+  .titleSuccess {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .img {
+    display: none;
+  }
+}
+
+@media (max-width: 1150px) {
+  .imgSuccess {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .content,
+  .contentSuccess {
+    width: 400px;
+    position: relative;
+  }
+  .closeBtn,
+  .closeBthSuccess {
+    position: absolute;
+    right: -5px;
+  }
+  .contentWrapper {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    height: auto;
+  }
+  .contentWrapperSuccess {
+    position: absolute;
+    margin: 20px 0 0 20px;
+  }
+  .contentSuccess {
+    height: 194px;
+  }
+  .titleSuccess {
+    margin-bottom: 20px;;
+  } 
+  .successText {
+    margin: 0 0 20px 0;
   }
 }
  
